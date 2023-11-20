@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 10px;
+  font-family: "nunito", sans-serif;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Adiciona uma background color ao nav */
+.topnav {
+  background-color: #022861;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo dos links do Nav */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.5s all ease;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #02507e;
+  color: #ffffff;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 64px; */
+  padding: 64px 80px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 40em;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.info h2 {
+  border: 2px solid #ff725e;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 24px;
+}
+
+.info {
+  position: relative;
+}
+
+.p-info {
+  border-bottom: 2px solid #ff725e;
+  border-left: 2px solid #ff725e;
+  border-right: 2px solid #ff725e;
+  border-radius: 0 0 8px 8px;
+  margin-top: -16px;
+  margin-bottom: 32px;
+  padding: 0 30px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s all ease-in-out;
+  line-height: 20px;
+}
+
+.p-info li {
+  list-style-type: none;
+}
+
+.info img {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  transition: 0.2s ease;
+}
+
+.info.ativa .p-info {
+  height: fit-content;
+  opacity: 1;
+  padding: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cabecalho {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {
+      position: relative;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+}
