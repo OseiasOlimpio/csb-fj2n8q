@@ -47,6 +47,10 @@
   transition: 0.5s all ease;
 }
 
+.topnav a .icon {
+  background-color: transparent;
+}
+
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #02507e;
